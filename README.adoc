@@ -20,3 +20,14 @@ ifdef::env-github[]
 endif::[]
 
 Spring Batch item reader implementation that generates data using Faker.
+
+== Usage
+
+[source,java]
+----
+Map<String, String> fields = new HashMap<>();
+fields.put("firstName", "name.firstName");
+fields.put("lastName", "name.lastName");
+FakerItemReader reader = FakerItemReader.builder().fields(fields).build();
+reader.setMaxItemCount(count);
+----
