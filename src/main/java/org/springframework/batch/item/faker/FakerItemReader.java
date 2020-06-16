@@ -63,7 +63,7 @@ public class FakerItemReader extends AbstractItemCountingItemStreamItemReader<Ma
     }
 
     @Override
-    protected synchronized Map<String, Object> doRead() {
+    protected Map<String, Object> doRead() {
         Map<String, Object> map = new HashMap<>();
         if (includeMetadata) {
             map.put(FIELD_INDEX, getCurrentItemCount());
